@@ -68,7 +68,7 @@ class Floorfy {
 		$cube = "f.b.l.r.u.d";
 		$cubeFaces = explode(".", $cube);
 		foreach($ids as $id) {
-			$url = $this->baseUrl."4k_".$id.".jpg";
+			$url = $this->baseUrl.$id.".jpg";
 			$name = "equi_".str_replace("equirectangular_", "", $id).".jpg";
 
 			$this->urlList->add($url, $name, "e");
