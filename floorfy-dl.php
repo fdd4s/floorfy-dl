@@ -7,6 +7,10 @@ $floorfy = new Floorfy($url);
 
 $floorfy->download();
 
+echo("done\n");
+echo("Support future improvements of this software https://www.buymeacoffee.com/fdd4s\n");
+
+
 class Floorfy {
 	var $id;
 	var $url;
@@ -27,8 +31,10 @@ class Floorfy {
 
 	public function getUrlJson($data) {
 		$urlJson = "https://cdn.floorfy.com/".$this->strBtn($data, '<input id="configpath" type="hidden" value="/', '"');
-		$this->baseUrl = str_replace("config.json", "", $urlJson);
-		return $urlJson;
+		$arr = explode("?", $urlJson);
+		$urlJson2 = $arr[0];
+		$this->baseUrl = str_replace("config.json", "", $urlJson2);
+		return $urlJson2;
 	}
 
 	private function strBtn($str_content, $str_start, $str_end) {
