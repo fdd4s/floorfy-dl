@@ -57,18 +57,23 @@ class Floorfy {
 		$json_arr = json_decode($data, true);
 		$ids = array();
 
+		$isJpeg = false;
+
 		foreach($json_arr['scenes'] as $scene) {
 			$ids[] = $scene['id'];
+			if (!$isJpeg && substr($scene['panorama'], -4)=="jpeg") $isJpeg = true;
 		}
 
-		$this->makeUrlList($ids);
+		$this->makeUrlList($ids, $isJpeg);
 	}
 
-	public function makeUrlList($ids) {
+	public function makeUrlList($ids, $isJpeg) {
 		$cube = "f.b.l.r.u.d";
 		$cubeFaces = explode(".", $cube);
 		foreach($ids as $id) {
-			$url = $this->baseUrl.$id.".jpg";
+			$url = $this->baseUrl.$id;
+			if ($isJpeg==false) $url.=".jpg"; else $url.=".jpeg"; 
+					
 			$name = "equi_".str_replace("equirectangular_", "", $id).".jpg";
 
 			$this->urlList->add($url, $name, "e");
