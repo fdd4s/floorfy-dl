@@ -22,7 +22,8 @@ It will download all the skybox and equirectangular images.
 
 ## Viewers
 
-Web Browser: Chrome and Firefox: Pannellum (webgl based), self hosted virtual tour, equirectangular and cubemap skybox: https://github.com/mpetroff/pannellum
+Web Browser: Chrome and Firefox: Pannellum (webgl based), self hosted virtual tour, equirectangular and cubemap skybox: https://github.com/mpetroff/pannellum  
+Pannellum configuration can be done with this script https://github.com/fdd4s/floorfy-dl-virtual-tour-web-viewer  
 
 Android: (only equirectangular) Ricoh Theta App https://play.google.com/store/apps/details?id=com.theta360&hl=en&gl=US  
 
