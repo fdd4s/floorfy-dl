@@ -1,6 +1,6 @@
 # floorfy downloader
 
-## What does
+## What it does
 
 floorfy-dl downloads cubemap skybox 360 and equirectangular panos photos of floorfy houses virtual tours 
 
